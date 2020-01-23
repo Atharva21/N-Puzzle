@@ -3,31 +3,26 @@ import "./Cell.css";
 
 function Cell(props) {
   function mouseDownHandler(event) {
-    if (props.isSpecial !== "0") return;
-    const name = event.target.id;
-    // console.log(name);
-    props.mdhandle(name);
+    if (props.value === null) return;
+    props.mdhandle(props.index);
   }
 
   function mouseUpHandler(event) {
-    if (props.isSpecial !== "0") return;
-    const name = event.target.id;
-    // console.log(name);
-    props.muphandle(name);
+    if (props.value !== null) return;
+    props.muphandle(props.index);
   }
 
   let customStyle = {};
-  if (props.isSpecial !== "0") {
+  if (Number(props.index) === Number(props.size) * Number(props.size)) {
     customStyle = {
-      gridColumnStart: `${Number(props.isSpecial)}`,
-      gridColumnEnd: `${Number(props.isSpecial) + 1}`
+      gridColumnStart: `${Number(props.size)}`,
+      gridColumnEnd: `${Number(props.size) + 1}`
     };
   }
 
   return (
     <div
       className="grid-cell"
-      id={props.index}
       onMouseDown={event => mouseDownHandler(event)}
       onMouseUp={event => mouseUpHandler(event)}
       style={customStyle}

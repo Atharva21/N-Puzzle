@@ -56,23 +56,14 @@ function Grid(props) {
   };
 
   function renderElement(item, index) {
-    return index !== gridLength - 1 ? (
+    return (
       <Cell
         key={index}
         value={item}
         index={index}
-        isSpecial="0"
         mdhandle={id => handleMousePressed(id)}
         muphandle={id => handleMouseReleased(id)}
-      />
-    ) : (
-      <Cell
-        key={index}
-        value={item}
-        index={index}
-        isSpecial={props.size}
-        mdhandle={id => handleMousePressed(id)}
-        muphandle={id => handleMouseReleased(id)}
+        size={props.size}
       />
     );
   }

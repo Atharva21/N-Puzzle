@@ -4,5 +4,6 @@
   display: grid;
   align-items: center;
   justify-items: center;
+  user-select: none;
   font-size: 2rem;
 }

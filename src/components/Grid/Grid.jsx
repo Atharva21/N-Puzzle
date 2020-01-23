@@ -3,10 +3,45 @@ import Cell from "../Cell/Cell";
 import "./Grid.css";
 
 function Grid(props) {
-  const gridLength = Number(props.rows) * Number(props.cols);
+  const gridLength = Number(props.size) * Number(props.size) + 1;
   const [state, setState] = useState({
-    array: initialFill()
+    array: initialFill(),
+    pressed: null
   });
+
+  function handleMousePressed(index) {
+    setState(prev => {
+      return { ...prev, pressed: Number(index) };
+    });
+  }
+
+  function handleMouseReleased(index) {
+    if (state.pressed == null) return;
+    let p = state.pressed;
+    let r = Number(index);
+    if (
+      r === p - 1 ||
+      r === p + 1 ||
+      r === p - Number(props.size) ||
+      r === p + Number(props.size)
+    ) {
+      setState(prev => {
+        let arr = prev.array.slice();
+        let temp = arr[p];
+        arr[p] = arr[r];
+        arr[r] = temp;
+        return { ...prev, array: arr };
+      });
+    } else {
+      setState(prev => {
+        return {
+          ...prev,
+          pressed: null
+        };
+      });
+    }
+  }
+
   function initialFill() {
     const arr = [];
     for (let i = 0; i < gridLength - 1; i++) arr.push(i + 1);
@@ -16,12 +51,30 @@ function Grid(props) {
   }
   const customStyle = {
     display: "grid",
-    "grid-template-rows": `repeat(${props.rows}, 100px)`,
-    "grid-template-columns": `repeat(${props.cols}, 100px)`
+    gridTemplateRows: `repeat(${Number(props.size) + 1}, 100px)`,
+    gridTemplateColumns: `repeat(${props.size}, 100px)`
   };
 
   function renderElement(item, index) {
-    return <Cell key={index} value={item} />;
+    return index !== gridLength - 1 ? (
+      <Cell
+        key={index}
+        value={item}
+        index={index}
+        isSpecial="0"
+        mdhandle={id => handleMousePressed(id)}
+        muphandle={id => handleMouseReleased(id)}
+      />
+    ) : (
+      <Cell
+        key={index}
+        value={item}
+        index={index}
+        isSpecial={props.size}
+        mdhandle={id => handleMousePressed(id)}
+        muphandle={id => handleMouseReleased(id)}
+      />
+    );
   }
 
   return (

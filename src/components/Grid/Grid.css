@@ -1,0 +1,4 @@
+.grid-container {
+  border: 3px dotted green;
+  grid-gap: 2px;
+}

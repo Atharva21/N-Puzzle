@@ -1,0 +1,8 @@
+.grid-cell {
+  background-color: #bbb;
+  border: 1px solid black;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  font-size: 2rem;
+}

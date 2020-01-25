@@ -46,12 +46,14 @@ function Grid(props) {
 
   function initialFill() {
     const arr = [];
-    for (let i = 0; i < gridLength - 1; i++) arr.push(i + 1);
-    arr.push(null);
+    let i;
+    for (i = 0; i < gridLength - 2; i++) arr.push(i + 1);
     let result = [];
+    result.push(i + 1);
+    result.push(null);
     while (arr.length !== 0) {
       let r = Math.floor(Math.random() * arr.length);
-      result.push(arr[r]);
+      result.unshift(arr[r]);
       arr.splice(r, 1);
     }
     return result;

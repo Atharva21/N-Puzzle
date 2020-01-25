@@ -11,7 +11,7 @@ function Grid(props) {
 
   let result = checkWin();
   if (result) {
-    console.log("YOU WIN!!");
+    props.setStatus("You Win!!");
   }
 
   function handleMousePressed(index) {

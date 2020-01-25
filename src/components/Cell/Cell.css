@@ -1,9 +1,13 @@
 .grid-cell {
   background-color: #bbb;
-  border: 1px solid black;
   display: grid;
   align-items: center;
   justify-items: center;
   user-select: none;
   font-size: 2rem;
+  border-radius: 30%;
+}
+
+.grid-cell:hover {
+  box-shadow: 3px 3px 3px 3px #111;
 }

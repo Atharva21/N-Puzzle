@@ -51,8 +51,8 @@ function Grid(props) {
     }
   }
 
-  function checkWin() {
-    let arr = state.array.slice();
+  function checkWin(arr = null) {
+    if (arr === null) arr = state.array.slice();
     let horizontal = true;
     for (let i = 0; i < gridLength - 1; i++) {
       if (i + 1 !== arr[i]) {
@@ -84,6 +84,7 @@ function Grid(props) {
       result.unshift(arr[r]);
       arr.splice(r, 1);
     }
+    if (checkWin(result)) return initialFill();
     return result;
   }
   const customStyle = {

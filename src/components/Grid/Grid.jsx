@@ -9,13 +9,20 @@ function Grid(props) {
     pressed: null
   });
 
+  let result = checkWin();
+  if (result) {
+    console.log("YOU WIN!!");
+  }
+
   function handleMousePressed(index) {
+    if (result) return;
     setState(prev => {
       return { ...prev, pressed: Number(index) };
     });
   }
 
   function handleMouseReleased(index) {
+    if (result) return;
     if (state.pressed == null) return;
     let p = state.pressed;
     let r = Number(index);
@@ -42,7 +49,25 @@ function Grid(props) {
     }
   }
 
-  //TODO add checkWin()
+  function checkWin() {
+    let arr = state.array.slice();
+    let horizontal = true;
+    for (let i = 0; i < gridLength - 1; i++) {
+      if (i + 1 !== arr[i]) {
+        horizontal = false;
+        break;
+      }
+    }
+    if (horizontal) return true;
+    for (let i = 0; i < Number(props.size); i++) {
+      let idx = i * Number(props.size);
+      for (let j = idx + 1; j < idx + Number(props.size); j++) {
+        let diff = arr[j] - arr[j - 1];
+        if (diff !== Number(props.size)) return false;
+      }
+    }
+    return true;
+  }
 
   function initialFill() {
     const arr = [];

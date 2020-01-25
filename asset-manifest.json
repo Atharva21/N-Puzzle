@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/N-Puzzle/static/css/main.2d8f5f26.chunk.css",
-    "main.js": "/N-Puzzle/static/js/main.1fe5a437.chunk.js",
-    "main.js.map": "/N-Puzzle/static/js/main.1fe5a437.chunk.js.map",
+    "main.js": "/N-Puzzle/static/js/main.34c38d06.chunk.js",
+    "main.js.map": "/N-Puzzle/static/js/main.34c38d06.chunk.js.map",
     "runtime-main.js": "/N-Puzzle/static/js/runtime-main.4cceb170.js",
     "runtime-main.js.map": "/N-Puzzle/static/js/runtime-main.4cceb170.js.map",
     "static/js/2.d8e5eaf9.chunk.js": "/N-Puzzle/static/js/2.d8e5eaf9.chunk.js",
     "static/js/2.d8e5eaf9.chunk.js.map": "/N-Puzzle/static/js/2.d8e5eaf9.chunk.js.map",
     "index.html": "/N-Puzzle/index.html",
-    "precache-manifest.35dfdc9872791f7c8b246d216bf95f66.js": "/N-Puzzle/precache-manifest.35dfdc9872791f7c8b246d216bf95f66.js",
+    "precache-manifest.64f84a1e600e1b9961503806c6db18af.js": "/N-Puzzle/precache-manifest.64f84a1e600e1b9961503806c6db18af.js",
     "service-worker.js": "/N-Puzzle/service-worker.js",
     "static/css/main.2d8f5f26.chunk.css.map": "/N-Puzzle/static/css/main.2d8f5f26.chunk.css.map",
     "static/js/2.d8e5eaf9.chunk.js.LICENSE": "/N-Puzzle/static/js/2.d8e5eaf9.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.4cceb170.js",
     "static/js/2.d8e5eaf9.chunk.js",
     "static/css/main.2d8f5f26.chunk.css",
-    "static/js/main.1fe5a437.chunk.js"
+    "static/js/main.34c38d06.chunk.js"
   ]
 }

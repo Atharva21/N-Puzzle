@@ -4,7 +4,7 @@ import Grid from "./Grid/Grid";
 function App() {
   return (
     <div className="container">
-      <Grid size="2" />
+      <Grid size="3" />
     </div>
   );
 }

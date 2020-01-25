@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Cell from "../Cell/Cell";
 import "./Grid.css";
 
+/* TODO RESET LOGIC && GAME UI */
+
 function Grid(props) {
   const gridLength = Number(props.size) * Number(props.size) + 1;
   const [state, setState] = useState({
@@ -61,6 +63,7 @@ function Grid(props) {
     if (horizontal) return true;
     for (let i = 0; i < Number(props.size); i++) {
       let idx = i * Number(props.size);
+      if (arr[idx] !== i + 1) return false;
       for (let j = idx + 1; j < idx + Number(props.size); j++) {
         let diff = arr[j] - arr[j - 1];
         if (diff !== Number(props.size)) return false;

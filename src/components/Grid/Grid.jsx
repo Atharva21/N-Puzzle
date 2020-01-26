@@ -6,10 +6,20 @@ import "./Grid.css";
 
 function Grid(props) {
   const gridLength = Number(props.size) * Number(props.size) + 1;
+  // const [propsState, setPropsState] = useState(props);
   const [state, setState] = useState({
     array: initialFill(),
     pressed: null
   });
+
+  if (state.array.length !== gridLength) {
+    setState(prev => {
+      return {
+        ...prev,
+        array: initialFill()
+      };
+    });
+  }
 
   function handleMousePressed(index) {
     if (checkWin()) return;

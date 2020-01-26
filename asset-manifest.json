@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/N-Puzzle/static/css/main.2d8f5f26.chunk.css",
-    "main.js": "/N-Puzzle/static/js/main.34c38d06.chunk.js",
-    "main.js.map": "/N-Puzzle/static/js/main.34c38d06.chunk.js.map",
+    "main.css": "/N-Puzzle/static/css/main.ec0ea22c.chunk.css",
+    "main.js": "/N-Puzzle/static/js/main.3327f9bb.chunk.js",
+    "main.js.map": "/N-Puzzle/static/js/main.3327f9bb.chunk.js.map",
     "runtime-main.js": "/N-Puzzle/static/js/runtime-main.4cceb170.js",
     "runtime-main.js.map": "/N-Puzzle/static/js/runtime-main.4cceb170.js.map",
-    "static/js/2.d8e5eaf9.chunk.js": "/N-Puzzle/static/js/2.d8e5eaf9.chunk.js",
-    "static/js/2.d8e5eaf9.chunk.js.map": "/N-Puzzle/static/js/2.d8e5eaf9.chunk.js.map",
+    "static/js/2.690b6895.chunk.js": "/N-Puzzle/static/js/2.690b6895.chunk.js",
+    "static/js/2.690b6895.chunk.js.map": "/N-Puzzle/static/js/2.690b6895.chunk.js.map",
     "index.html": "/N-Puzzle/index.html",
-    "precache-manifest.64f84a1e600e1b9961503806c6db18af.js": "/N-Puzzle/precache-manifest.64f84a1e600e1b9961503806c6db18af.js",
+    "precache-manifest.da608441083303db6c97d24c6321a934.js": "/N-Puzzle/precache-manifest.da608441083303db6c97d24c6321a934.js",
     "service-worker.js": "/N-Puzzle/service-worker.js",
-    "static/css/main.2d8f5f26.chunk.css.map": "/N-Puzzle/static/css/main.2d8f5f26.chunk.css.map",
-    "static/js/2.d8e5eaf9.chunk.js.LICENSE": "/N-Puzzle/static/js/2.d8e5eaf9.chunk.js.LICENSE"
+    "static/css/main.ec0ea22c.chunk.css.map": "/N-Puzzle/static/css/main.ec0ea22c.chunk.css.map",
+    "static/js/2.690b6895.chunk.js.LICENSE": "/N-Puzzle/static/js/2.690b6895.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.4cceb170.js",
-    "static/js/2.d8e5eaf9.chunk.js",
-    "static/css/main.2d8f5f26.chunk.css",
-    "static/js/main.34c38d06.chunk.js"
+    "static/js/2.690b6895.chunk.js",
+    "static/css/main.ec0ea22c.chunk.css",
+    "static/js/main.3327f9bb.chunk.js"
   ]
 }

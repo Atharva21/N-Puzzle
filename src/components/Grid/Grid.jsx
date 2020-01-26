@@ -11,20 +11,15 @@ function Grid(props) {
     pressed: null
   });
 
-  let result = checkWin();
-  if (result) {
-    props.setStatus("You Win!!");
-  }
-
   function handleMousePressed(index) {
-    if (result) return;
+    if (checkWin()) return;
     setState(prev => {
       return { ...prev, pressed: Number(index) };
     });
   }
 
   function handleMouseReleased(index) {
-    if (result) return;
+    if (checkWin()) return;
     if (state.pressed == null) return;
     let p = state.pressed;
     let r = Number(index);
@@ -34,11 +29,16 @@ function Grid(props) {
       r === p - Number(props.size) ||
       r === p + Number(props.size)
     ) {
+      let result;
       setState(prev => {
         let arr = prev.array.slice();
         let temp = arr[p];
         arr[p] = arr[r];
         arr[r] = temp;
+        result = checkWin(arr);
+        if (result) {
+          props.winstate();
+        }
         return { ...prev, array: arr };
       });
     } else {

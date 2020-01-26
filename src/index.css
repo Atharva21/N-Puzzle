@@ -14,13 +14,50 @@ body {
   display: grid;
   align-items: center;
   justify-items: center;
+  grid-auto-flow: row;
 }
 
 .status {
-  margin-top: 10%;
   font-family: "Lucida Console";
   font-size: 2rem;
   color: #eee;
+  user-select: none;
+}
+
+.status .win-text {
+  color: lightgreen;
+  margin-top: 20px;
+  bottom: 15px;
+}
+
+.container .level-text {
+  position: absolute;
+  font-family: "Lucida Console";
+  color: white;
+  font-size: 2.5rem;
+  right: 25px;
+  bottom: 30px;
+}
+
+.container input {
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+  outline: none;
+}
+
+.status .replay-text {
+  font-size: 2.5rem;
+
+  position: absolute;
+  bottom: 30px;
+  left: 35px;
+}
+
+.status .replay-text:hover {
+  color: black;
+  font-size: 2.7rem;
+  outline: none;
 }
 
 code {
